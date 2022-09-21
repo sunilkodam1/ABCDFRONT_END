@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUser": [
+    {
+      "fullname": "aravind",
+      "email": "test@gmail.com",
+      "password": "1234",
+      "mobile": "12344",
+      "id": 1
+    },
+    {
+      "fullname": "aravind",
+      "email": "test@gmail.com",
+      "password": "124343",
+      "role": "admin",
+      "mobile": "22222",
+      "id": 2
+    },
+    {
+      "fullname": "arabind",
+      "email": "admin@gmail.com",
+      "password": "12333",
+      "role": "admin",
+      "mobile": "22321",
+      "id": 3
+    },
+    {
+      "fullname": "arabind",
+      "email": "test@gmail.com",
+      "password": "1234",
+      "role": "emp",
+      "mobile": "22222",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,30 @@
+ <!-- <p>update-loan works!</p> -->
+<div class="col-md-6 offset-md-3" class="update-loan">
+    <h3 class="text-center"> Update Loan</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Loan Name</label>
+            <input type="text" class="form-control" id="loanName" 
+            [(ngModel)] = "loan.loanName" name="loanName">   
+        </div>
+        <div class="form-group">
+            <label>Loan Type</label>
+            <input type="text" class="form-control" id="loanType" 
+            [(ngModel)] = "loan.loanType" name="loanType">   
+        </div>
+        <div class="form-group">
+            <label>Loan Description</label>
+            <input type="text" class="form-control" id="loanDescription" 
+            [(ngModel)] = "loan.loanDescription" name="loanDescription">   
+        </div>
+        <div class="form-group">
+            <label>Interest Percentage</label>
+            <input type="number" class="form-control" id="interestPercentage" 
+            [(ngModel)] = "loan.percentage" name="interestPercentage">   
+        </div>
+        <br>
+        <div >
+        <button class="btn btn-success" type="submit">Update</button>
+        </div>
+    </form>
+    </div>

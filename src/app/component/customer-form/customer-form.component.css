@@ -1,0 +1,29 @@
+.space {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+  }
+
+  .container-fluid{
+    margin-top: 50px;
+
+    border: none;
+
+    width: 800px;
+
+    padding: 40px;
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-59%, -50%);
+
+    background: rgb(87, 95, 100);
+
+    background: linear-gradient(90deg, rgb(144, 160, 163) 0%, rgb(80, 182, 246)100%);
+
+
+}

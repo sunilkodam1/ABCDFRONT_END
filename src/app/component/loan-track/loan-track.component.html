@@ -1,0 +1,41 @@
+<div class="col-md-6 offset-md-3">
+  <h3> Loan Tracking</h3>
+  <form [formGroup] = "applicationTrackForm" (ngSubmit)="submit()">
+      <div class="form-group">
+          <label>Apllication Id</label>
+           <input type="text" formControlName="id" class="form-control" id="id"
+           placeholder="Enter Application Id"/> 
+      </div>&nbsp;
+      
+       <div >
+        <nav class="navbar navbar-light bg-warning">
+          <div class="container-fluid">
+              <div class="d-flex">
+                  <button type="button" (click)="submit()" class="btn btn-success"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+              </div>      
+            </div>
+       </nav> 
+      </div> 
+  </form>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Application Status and Comments</h5>
+      </div>
+      <div class="modal-body">
+      <h1>{{status}}</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

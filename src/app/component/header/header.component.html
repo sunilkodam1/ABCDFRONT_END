@@ -1,0 +1,70 @@
+
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">ABC Bank</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/loantrack" >Status Tracking</a>
+          </li>
+          <div >
+          <li class="nav-item">
+            <a  *ngIf="loggedIn() && loggedIn()=='admin'" class="nav-link active" aria-current="page" routerLink="/admin">Admin </a>
+          </li>
+        </div>
+        <div >
+          <li class="nav-item">
+            <a  *ngIf="loggedIn() && loggedIn()=='admin'" class="nav-link active" aria-current="page" routerLink="/loans">Loan deatils </a>
+          </li>
+        </div>
+        <div >
+          <li class="nav-item">
+            <a  *ngIf="loggedIn() && loggedIn()=='admin'" class="nav-link active" aria-current="page" routerLink="/create-loan">create Loan </a>
+          </li>
+        </div>
+        <div >
+          <li class="nav-item">
+            <a  *ngIf="loggedIn() && loggedIn()=='admin'" class="nav-link active" aria-current="page" routerLink="update-loan/:id">Update Loan Details </a>
+          </li>
+        </div>
+        
+        <div >
+          <li class="nav-item">
+            <a *ngIf="loggedIn() && loggedIn()=='employee'" class="nav-link active" aria-current="page" routerLink="/ladstatus">Customer Application </a>
+          </li>
+        </div>
+        <div >
+          <li class="nav-item">
+            <a *ngIf="loggedIn() && loggedIn()=='employee'"class="nav-link active" aria-current="page" routerLink="/ladview">Status Tracking</a>
+          </li>
+        </div> 
+        </ul>
+     
+         
+          <button *ngIf="!loggedIn()" class="btn btn-primary" type="submit" routerLink="/login">Employee Login</button>
+          <button  *ngIf="!loggedIn()" class="btn btn-danger" style="margin-left: 30px;" type="submit" routerLink="/signup">Employee Registration</button>
+         
+          <!-- <button *ngIf="loggedIn()" (click)="onLogout()" class="btn btn-danger" style="margin-left: 30px;" type="submit">Employee logout</button> -->
+           <div *ngIf="loggedIn()"  style="margin-left: 30px;" class="dropdown mr-5 btn btn-danger" dropdown>
+            <button class="dropdown-toggle text-danger" dropdownToggle (click)="false">
+                Welcome {{ loggedInUserData()}}</button>
+              <div class="dropdown-menu" *dropdownMenu>
+                <a href="#" class="dropdown-item">
+                  <i class="fas fa-tachometer-alt"></i>View Dashboard
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="far fa-user-circle"></i>My Profile
+                </a>
+                <button (click)="onLogout()"  class="btn btn-primary">
+                  <i class="fas fa-sign-out-alt"></i>Logout {{ loggedInUserData()  }}
+                </button>
+              </div>
+
+           </div>
+      </div>
+    </div>
+  </nav>
+  

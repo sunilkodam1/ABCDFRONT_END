@@ -1,0 +1,53 @@
+<nav class="navbar navbar-light bg-secondary">
+    <div class="container-fluid">
+        <div class="d-flex">
+            <h1>Loan Form Verification</h1>
+        </div>
+    </div>
+</nav>
+
+<div class="card-header">
+    <table class="table mt-3">
+        <thead class="table-header">
+            <tr class="metaData">
+                <td scope="col">Application Id</td>
+                <td scope="col">FirstName</td>
+                <td scope="col">LastName</td>
+                <td scope="col">Email</td>
+                <td scope="col">Salary</td>
+                <td scope="col">Phone</td>
+                <td scope="col">Address</td>
+                <td scope="col">Aadhar</td>
+                <td scope="col">Pan</td>
+                <td scope="col">Status</td>
+                <td scope="col">Comments</td>
+                <td scope="col">Action</td>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let a of loanData">
+                <th>{{a.id}}</th>
+                <td>{{a.firstName}}</td>
+                <td>{{a.lastName}}</td>
+                <td>{{a.email}}</td>
+                <td>{{a.salary}}</td>
+                <td>{{a.phone}}</td>
+                <td>{{a.address}}</td>
+                <td>{{a.aadhar}}</td>
+                <td>{{a.pan}}</td>
+                <td>{{a.status}}</td>
+                <td>{{a.remark}}</td>
+                <td>
+                    <button (click)="updateLoan(a.id)" class="btn btn-info">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+

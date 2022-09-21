@@ -1,0 +1,16 @@
+.navbar{
+   
+    background: rgb(112, 167, 206);
+    background: linear-gradient(90deg, rgb(110, 171, 182) 0%, rgb(80, 182, 246)100%);
+
+}
+
+ul li a{
+    
+    font-size: 25px;
+    size : 50px;
+    padding: 20px;
+    color :blue; 
+    text-decoration: solid;
+}
+

@@ -1,0 +1,37 @@
+
+.update-loan{
+
+    margin-top: 30px; 
+
+    border: none;
+
+    width: 800px;
+
+    padding: 40px;
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-59%, -50%);
+
+    background: rgb(174, 46, 172);
+
+    background: linear-gradient(90deg, rgb(211, 122, 172) 0%, rgb(101, 191, 201)100%);
+
+}
+
+.update-loan h3,h5{
+
+    color: rgb(24, 2, 121);
+}
+
+label{
+
+ color: rgb(18, 18, 114);
+
+ font-size: 20px;
+
+}

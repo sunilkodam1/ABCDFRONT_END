@@ -1,0 +1,117 @@
+<div class="container-fluid">
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+  <h2 style="text-align:center" class="header">Loan Application Form </h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+      <div class="col-sm-5">
+        <input type="email" formControlName="email" class="form-control form-control-sm" placeholder="Enter Email"
+          [ngClass]="{ 'is-invalid': submitted && ['email'] }">
+        <div *ngIf="submitted && ['email']errors" class="invalid-feedback">
+          <div *ngIf="['email']required">Email is required</div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <div class="form-group row">
+      <label id="firstname" for="firstname" class="col-sm-2 col-form-label col-form-label-sm">First Name</label>
+      <div class="col-sm-5">
+        <input type="text" formControlName="firstname" class="form-control" placeholder="Enter firstname"
+          [ngClass]="{ 'is-invalid': submitted && ['firstname'] }" />
+        <div *ngIf="submitted && ['firstname']errors" class="invalid-feedback">
+          <div *ngIf="['firstname']invalid">First Name is required</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="form-group row">
+      <label for="lastname" class="col-sm-2 col-form-label col-form-label-sm">Last Name</label>
+      <div class="col-sm-5">
+        <input type="text" formControlName="lastname" class="form-control" placeholder="Enter lastname"
+          [ngClass]="{ 'is-invalid': submitted && ['lastname'] }" />
+        <div *ngIf="submitted && ['lastname']errors" class="invalid-feedback">
+          <div *ngIf="['lastname']required">Last Name is required</div>
+        </div>
+
+      </div>
+
+    </div>
+    <br>
+    <div class="form-group row">
+      <label for="salary" class="col-sm-2 col-form-label col-form-label-sm">salary</label>
+      <div class="col-sm-5">
+        <input type="number" formControlName="salary" class="form-control" placeholder="Enter valid salary"
+          [ngClass]="{ 'is-invalid': submitted && ['salary'] }" />
+        <div *ngIf="submitted && ['salary']errors" class="invalid-feedback">
+          <div *ngIf="['salary']required">Salary is required</div>
+        </div>
+
+      </div>
+
+    </div>
+    <br>
+
+    <div class="form-group row">
+      <label for="mobileNumber" class="col-sm-2 col-form-label col-form-label-sm">Mobile Number</label>
+      <div class="col-sm-5">
+        <input type="number" formControlName="mobileNumber" class="form-control" placeholder="Enter valid mobile number"
+          [ngClass]="{ 'is-invalid': submitted && ['mobileNumber'] }" />
+        <div *ngIf="submitted && ['mobileNumber']errors" class="invalid-feedback">
+          <div *ngIf="['mobileNumber']required">mobileNo is required</div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+    <div class="form-group row">
+      <label for="adharNumber" class="col-sm-2 col-form-label col-form-label-sm">Adhar Number</label>
+      <div class="col-sm-5">
+        <input type="number" formControlName="adharNumber" class="form-control" placeholder="Enter Adhar number"
+          [ngClass]="{ 'is-invalid': submitted && ['adharNumber'] }" />
+        <div *ngIf="submitted && ['adharNumber']errors" class="invalid-feedback">
+          <div *ngIf="['adharNumber']required">adhaNumber is required</div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+
+    <div class="form-group row">
+      <label for="address" class="col-sm-2 col-form-label col-form-label-sm">Address</label>
+      <div class="col-sm-5">
+        <input type="text" formControlName="address" class="form-control" placeholder="Enter Address"
+          [ngClass]="{ 'is-invalid': submitted && ['address'] }" />
+        <div *ngIf="submitted && ['address']errors" class="invalid-feedback">
+          <div *ngIf="['address']required">Address is required</div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+
+    <br>
+    <div class="row justify-content-start mt-4">
+      <div class="col">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            <a>hereby agree to the Terms and Conditions. </a>
+          </label>
+        </div>
+        <div class="form-group">
+          <div class="space"> </div>
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Apply
+          </button>
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          <div class="space"> </div>
+          <button type="button" class="btn btn-secondary" (click)="onCancel()"> Cancel </button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

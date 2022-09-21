@@ -1,0 +1,32 @@
+.container-fluid{
+    margin-top: 25%;
+
+    border: none;
+
+    width: 1400px;
+
+    padding: 20px;
+
+    position: absolute;
+
+    top: 40%;
+
+    left: 60%;
+
+    transform: translate(-59%, -50%);
+
+    background: rgb(87, 95, 100);
+
+    background: linear-gradient(90deg, rgb(144, 160, 163) 0%, rgb(80, 182, 246)100%);
+
+
+}
+
+.card{
+    margin-top: 10px;
+   padding: 10px;
+}
+
+.bg{
+    background: url('/src/assets/images/home_bg.jpg');
+}

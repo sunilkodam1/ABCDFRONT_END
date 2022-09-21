@@ -1,0 +1,29 @@
+
+.card{
+    margin-top: 30px;
+    border: none;
+    width: 800px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-59%, -50%);
+    background: hsla(205, 46%,30%,1);
+    background: linear-gradient(90deg, rgb(144, 160, 163) 0%, rgb(80, 182, 246)100%);
+}
+.card h1,h5{
+    color: #fff;
+
+}
+label{
+ color: #fff;
+ font-size: 30px;
+}
+
+.container-fluid{
+
+    background-image: url( "src/assets/images/login1.jpg");
+    height: max-content;
+    height: 800px;
+
+}
