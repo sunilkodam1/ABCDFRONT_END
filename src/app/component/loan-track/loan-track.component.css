@@ -1,0 +1,14 @@
+.card{
+ 
+    margin-top:200px;
+}
+.card{
+
+    /* background-image: url( "src/assets/images/login1.jpg"); */
+    height: max-content;
+    height: 800px;
+    max-height: fit-content;
+   
+ 
+
+}

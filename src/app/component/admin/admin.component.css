@@ -1,0 +1,35 @@
+.container-top{
+    margin-top: 150px;
+    /* background-image: url( "src/assets/images/login1.jpg"); */
+    height: max-content;
+ 
+}
+.card-sidebar{
+   
+    position: absolute;
+    padding: 10px;
+    background: rgb(174, 46, 172);
+
+    background: linear-gradient(90deg, rgb(117, 188, 216) 0%, rgb(246, 80, 216)100%);
+
+}
+span{
+    font-size: 25px;
+}
+.right-card{
+
+    /* background-image: url( "src/assets/images/login1.jpg"); */
+    height: max-content;
+    height: 800px;
+    max-height: fit-content;
+    background: rgb(174, 46, 172);
+
+    background: linear-gradient(90deg, rgb(117, 188, 216) 0%, rgb(246, 80, 216)100%);
+
+  
+}
+
+  
+ 
+
+  

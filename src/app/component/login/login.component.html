@@ -11,6 +11,9 @@
                 <div >
                     <form [formGroup]="loginForm" ngNativeValidate (ngSubmit)="login()">
                         <div class="mb-3">
+                          <div *ngIf="invalidCredentialMsg!=null" style="color: red;">
+                            <h4>{{invalidCredentialMsg}}</h4>
+                          </div>
                           <label for="exampleInputEmail1" class="form-label">Email address</label>
                           <input formControlName="email" type="email" class="form-control"  required="email" >
                           <div id="emailHelp" style="color: white ;  font-size: 20px;" >We'll never share your email with anyone else.</div>

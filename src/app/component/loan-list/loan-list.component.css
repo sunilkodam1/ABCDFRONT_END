@@ -42,6 +42,11 @@ thead th {
   }
 
   table tfoot {
-    inset-block-end: 0; /* "bottom" */
+    inset-block-end: 0; 
     position: sticky;
+  }
+  .card{
+
+    margin-top:80px;
+
   }

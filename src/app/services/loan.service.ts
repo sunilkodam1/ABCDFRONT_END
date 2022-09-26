@@ -10,7 +10,6 @@ export class LoanService {
   private baseUrl="http://localhost:8081/api/admin";
 
   constructor(private httpClient: HttpClient) { }
-  
   getLoansList(): Observable<Loan[]>{
     console.log("inside getLoansList of serviceclass ")
     return this.httpClient.get<Loan[]>(`${this.baseUrl}`+"/getLoans");

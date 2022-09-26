@@ -51,16 +51,16 @@ export class LoginComponent implements OnInit {
           } else {
 
             this.loggedInUser = res;
-            this.router.navigate(['ladstatus']);
+            this.router.navigate(['loanstatus']);
           }
 
         } else {
+          this.invalidCredentialMsg='User id or password incorrect';
         }
 
       }, err => {
-
-        console.log(err)
-        alert("User data not exist please register");
+        this.invalidCredentialMsg='User id or password incorrect';
+  
       })
   }
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Loan } from 'src/app/models/loan copy';
-import { LoanService } from 'src/app/services/loan.service';
+import { Loan } from 'src/app/models/loan copy'; 
+import { LoanService } from 'src/app/services/loan.service'; 
 
 @Component({
   selector: 'app-loan-list',
@@ -11,7 +11,7 @@ import { LoanService } from 'src/app/services/loan.service';
 })
 export class LoanListComponent implements OnInit {
 
-  loan: Loan = new Loan;
+loan: Loan = new Loan;
   loans!: Loan[];
   constructor(private loanService: LoanService,
     private router: Router) { }
@@ -20,23 +20,23 @@ export class LoanListComponent implements OnInit {
     this.getLoans();
   }
 
-  private getLoans() {
+  private getLoans(){
     this.loanService.getLoansList()
-      .subscribe(data => {
-        this.loans = data;
-      });
+    .subscribe(data => {
+      this.loans=data;
+    });
 
   }
 
-  updateLoan(id: any) {
-    this.router.navigate(['update-loan', id]);
+  updateLoan(id: any){
+    this.router.navigate(['update-loan',id]);
   }
-  deleteLoan(id: number) {
+  deleteLoan(id:number){
     console.log("in deleteLoan method");
-    this.loanService.deleteLoan(id).subscribe(data => {
+    this.loanService.deleteLoan(id).subscribe( data => {
       this.getLoans();
-      console.log("inside deleteLoan " + data);
-    }, error => console.log(error));
+      console.log("inside deleteLoan "+data);
+    },error => console.log(error));
     this.getLoans();
   }
 }

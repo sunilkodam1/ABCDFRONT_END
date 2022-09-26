@@ -1,50 +1,115 @@
-<div class="bg" >
 
-<div class="card-top container-fluid">
-    <h2 style="text-align:center" class="header">ABC Bank </h2>
-    <div class="container">
-      <div *ngFor="let item of loansList">
-
+<div class="container-top ">
+  <div class="row">
     
-      <div class="card">
-        <div class="card-header">
-          <h2>{{item.loanName}}</h2>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title"><p>{{item.loanDescription}}</p></h5>
-          <h5 class="card-text">{{item.percentage}}</h5>
-          <h5 class="card-text">{{item.loanType}}</h5>
+       <div class="card-sidebar col-md-2 ">
          
+            <a class="nav-link " href="index.html">
+              <span><h4>Dashboard</h4></span>
+            </a>
+        
           
-          <button class ="btn" (click)=apply(item)> <i class="fa fa-calculator">Apply</i></button> 
-        </div>
-      </div>
-    </div> 
-   
+       <button class=" btn nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse">
+        
+          <span>Personal</span>
+        </button>  
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+             <span>Saving Account</span>
+          </li>
+          <li>
+            <span>Loans</span>
+          </li>
+          <li>
+           <span>Card</span>
+          </li>
+          <li>
+            <span>Deposit</span>
+          </li>
+          <li>
+           <span>Insurance</span>
+          </li>
+          <li>
+             <span>Cards</span>
+          
+          </li>
+          <li>
+           <span>Invest</span>
       
-        <div class="row">
+          </li>
+          <li>
+             <span>Other Service</span>
+       
+          </li>
+          <li>
+            <span>Our Product</span>
+        </li>
+        </ul>
+
+        <button class="btn nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" >
+         
+          <span>Business</span>
+        </button>  
+         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <span>MSMS</span>
+          </li>
+          <li>
+              <span>Loans</span>
+          </li>
+          <li>
+              <span>Other Services</span>
+          </li>
+         
+        </ul>
+        <button class="btn nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" >
+         
+          <span>Business</span>
+        </button>  
+         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <span>MSMS</span>
+          </li>
+          <li>
+              <span>Loans</span>
+          </li>
+          <li>
+              <span>Other Services</span>
+          </li>
+         
+        </ul>
+   
+       </div>
+         
+   
+       <div class="container-fluid col-md-10 right-card">
+
+            <h2 style="text-align:center" class="header">Loans Details </h2>
+            <div class="container">
+              <div *ngFor="let item of loansList">
 
             
-            
-        <!-- <ng-container *ngFor="let item of loansList">
-
-            <div class="card col-md-3">     
-                        
-                <p>{{item.number}}</p>
-                <h5>{{item.name}}</h5>
-                <p>{{item.duration}}</p>
-                <p>{{item.type}}</p>
+              <div class="card">
+                <div class="card-header">
+                  <h2>{{item.loanName}}</h2>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><p>Loan Details : {{item.loanDescription}}</p></h5>
+                  <h5 class="card-text">Loan intrest per anum : {{item.percentage}}</h5>
+                  <h5 class="card-text">{{item.loanType}}</h5>
                 
-                <div calss="column">
-                <button class ="btn btn-primary" (click)=apply(item)> Apply</button> 
-                               
-            </div>
-            </div>
+                  
+                  <button class ="btn btn-primary" (click)=apply(item)> Apply</button> 
+                </div>
+              </div>
+            </div> 
 
-        </ng-container> -->
-
-        </div>
-    </div>
+        
+       </div>
+   </div>
+  
+  </div>
+  
+   
 </div>
   
-</div>

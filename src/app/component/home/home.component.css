@@ -1,32 +1,44 @@
-.container-fluid{
-    margin-top: 25%;
+.container-top{
+    padding: 5px;
+    margin-bottom: 10px;
+    height: max-content;
+ 
+}
+.container-top .row{
+    margin-top: 150px;
+}
 
-    border: none;
-
-    width: 1400px;
-
-    padding: 20px;
-
+.card-sidebar{
+   
     position: absolute;
+    padding: 15px;
+    background: rgb(174, 46, 172);
 
-    top: 40%;
+    background: linear-gradient(90deg, rgb(117, 188, 216) 0%, rgb(246, 80, 216)100%);
 
-    left: 60%;
+}
+span{
+    font-size: 25px;
+}
 
-    transform: translate(-59%, -50%);
+.container-fluid{
+   
+    margin-left: 290px;
+ 
+    background: rgb(174, 46, 172);
 
-    background: rgb(87, 95, 100);
-
-    background: linear-gradient(90deg, rgb(144, 160, 163) 0%, rgb(80, 182, 246)100%);
+    background: linear-gradient(90deg, rgb(117, 188, 216) 0%, rgb(246, 80, 216)100%);
 
 
 }
 
 .card{
     margin-top: 10px;
-   padding: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
-.bg{
-    background: url('/src/assets/images/home_bg.jpg');
+.btn{
+    color: rgb(46, 13, 43);
 }
+

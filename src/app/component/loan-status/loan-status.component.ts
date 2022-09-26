@@ -26,7 +26,7 @@ export class LoanStatusComponent implements OnInit {
     })
   }
 
-  updateLoan(id: any){
+  viewLoanApllication(id: any){
     this.router.navigate(['loanView',id]);
   }
 

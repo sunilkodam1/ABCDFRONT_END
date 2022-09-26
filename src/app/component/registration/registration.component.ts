@@ -44,22 +44,5 @@ export class RegistrationComponent implements OnInit {
     }, err=>{
       alert("user alredy exsists");
     })
-
-
-
-
-
-      //  this.http.post<any>("http://localhost:8080/employee/addemployee",this.signupForm.value)
-    // .subscribe(res=>{
-    //   alert("Signup Successfull ");
-    //   this.signupForm.reset();
-    //   this.router.navigate(['login']);
-
-    // }, err=>{
-    //   alert("something went worng");
-    // })
-
-  }
-
-
+}
 }

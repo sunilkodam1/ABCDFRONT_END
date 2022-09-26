@@ -23,12 +23,12 @@ const routes: Routes = [
   {path:'signup', component:RegistrationComponent},
   {path:'login', component: LoginComponent},
        
-  {path: "ladview", component:LoanViewComponent,
+  {path: "loanview/:id", component:LoanViewComponent,
         canActivate:[AuthGuard]
   }, 
   
   {
-    path:"ladstatus",component:LoanStatusComponent, canActivate:[AuthGuard]
+    path:"loanstatus",component:LoanStatusComponent, canActivate:[AuthGuard]
   },
   {
     path: 'admin',component:AdminComponent,canActivate:[RoleGuard]

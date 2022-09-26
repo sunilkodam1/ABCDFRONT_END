@@ -12,22 +12,21 @@ export class LoginService {
 	private isloggedIn: boolean = false;
   public loggedInUserData:any;
   public loggedInUser:any;
-  
+  private baseUrl="http://localhost:8182";
   constructor(private http:HttpClient) { }
 
   login(loginForm:any){
-    return this.http.post<any>("http://localhost:8080/employee/login", loginForm)
+
+    return this.http.post<any>(`${this.baseUrl}`+"/employee/login" , loginForm)
     .pipe(map((res:any)=>{
      this.role=res.data.role;
-     console.log("data role"+this.role);
    
      if (res) {
       localStorage.setItem('user',res.data.ename);
      
       if(this.role == this.admin){
         localStorage.setItem('token',this.role);
-     
-       console.log("loggedIn User::::"+this.loggedInUser);
+        this.isloggedIn = true;
             }else{
               localStorage.setItem('token',this.role);
               this.isloggedIn = true;
@@ -53,11 +52,11 @@ export class LoginService {
 		this.isloggedIn = false;
 	}
   getloggedInUser(){
-    return this.loggedInUserData=localStorage.getItem('token');
+    return this.loggedInUserData = localStorage.getItem('token');
   }
 
   getloggedInUserData(){
-    return this.loggedInUserData=localStorage.getItem('user');
+    return this.loggedInUserData = localStorage.getItem('user');
   }
 
 }

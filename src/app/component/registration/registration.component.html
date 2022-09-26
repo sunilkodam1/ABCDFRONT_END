@@ -8,45 +8,28 @@
 
         </div>
         <form>
-          <form novalidate (ngSubmit)="signUp()" [formGroup]="signupForm">
+          <form  [formGroup]="signupForm" ngNativeValidate (ngSubmit)="signUp()">
 
 
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input formControlName="email" type="email" class="form-control" id="email" required="email">
+              <input formControlName="email" type="email" placeholder="Enter Email Id" class="form-control" id="email" required="email">
               <div id="emailHelp" style="color: white; font-size: 20px;" class="form-text">We'll never share your email
                 with anyone else.</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputName" class="form-label">Full Name</label>
-              <input formControlName="ename" type="text" class="form-control" id="ename" required="ename">
+              <input formControlName="ename" type="text" placeholder="Enter Full Name" class="form-control" id="ename" required="ename">
             </div>
             <div class="mb-3">
               <label for="exampleInputMobiles" class="form-label">Mobile num</label>
-              <input formControlName="mobile" type="text" class="form-control" id="mobile" required minlength="10"
-                maxlength="12" />
-              <!-- <input class="form-control"
-                          id="mobile"
-                          type="text"
-                          placeholder="Mobile Number (required)"
-                          formControlName="mobile"
-                          [ngClass]="{'is-invalid': (signupForm.get('mobile').touched ||
-                                                     signupForm.get('mobile').dirty) &&
-                                                     !signupForm.get('mobile').valid }" />
-                          <span class="invalid-feedback">
-                            <span *ngIf="!signupForm.get('mobile').errors?.required">
-                              Please enter your mobile number.
-                            </span>
-                            <span *ngIf="!signupForm.get('mobile').errors?.minlength">
-                              The mobile number must be longer than 3 characters.
-                            </span>
-                          </span> -->
-
+              <input formControlName="mobile" type="text" Placeholder="Enter Mobile Number" class="form-control" id="mobile" required minlength="10"
+                maxlength="10"  >
             </div>
 
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input formControlName="password" type="password" class="form-control" id="password" required="password">
+              <input formControlName="password" type="password" placeholder="EnterPassword" class="form-control" id="password" required="password">
               <!-- <input type="checkbox" onclick()="myFunction()">Show Password
               <script>
               function myFunction() {
@@ -66,8 +49,8 @@
 
               <div class="input-group mb-3">
 
-                <select class="form-select" formControlName="role" id="role" required="role">
-
+                <select class="form-select" formControlName="role"  id="role" required="role">
+                  
                   <option value="admin">Admin</option>
                   <option value="employee">Employee</option>
 
@@ -76,28 +59,15 @@
             </div>
             <div class="mb-3">
               <label for="exampleInputDept" class="form-label">Department</label>
-              <input formControlName="dept" type="text" class="form-control" id="dept" required="dept">
+              <input formControlName="dept" type="text" placeholder="Enter Department" class="form-control" id="dept" required="dept">
             </div>
             <div class="mb-3">
               <label for="exampleInputSalary" class="form-label">Salary</label>
-              <input formControlName="salary" type="text" class="form-control" id="salary" required="salary">
+              <input formControlName="salary" type="text" placeholder="enter Salary" class="form-control" id="salary" required="salary">
             </div>
 
 
             <button type="submit" style="font-size: 20px;" class="btn btn-primary">Sign up</button>
-            <!--                            
-                            <div class="form-group row mb-2">
-                              <div class="offset-md-2 col-md-4">
-                                <button class="btn btn-primary mr-3"
-                                        type="submit"
-                                        style="font-size: 20px;" 
-                                        [title]="!signupForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
-                                        [disabled]="!signupForm.valid">
-                                        Sign up
-                                </button>
-                               
-                              </div>
-                            </div> -->
 
           </form>
           <a style="color: white;font-size: 20px;" routerLink="/login">Already registered? click to login></a>

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Loan } from 'src/app/models/loan copy';
-import { LoanService } from 'src/app/services/loan.service';
+import { LoanService } from 'src/app/services/loan.service'; 
 
 @Component({
   selector: 'app-create-loan',

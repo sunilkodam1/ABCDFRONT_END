@@ -21,6 +21,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { CreateLoanComponent } from './component/create-loan/create-loan.component';
 import { LoanListComponent } from './component/loan-list/loan-list.component';
 import { UpdateLoanComponent } from './component/update-loan/update-loan.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { UpdateLoanComponent } from './component/update-loan/update-loan.compone
     LoanListComponent,
     CreateLoanComponent,
     UpdateLoanComponent,
+    FooterComponent,
 
    
   ],
